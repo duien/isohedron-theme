@@ -83,19 +83,52 @@
   (iso-ui-violet "#714EDA")
   (iso-ui-red "#FB6C6A"))
 
- ((default (:foreground iso-base-1 :background iso-base-7 )))
+ ((default (:foreground iso-base-1 :background iso-base-7 ))
+  (mode-line (:foreground iso-base-1 :background iso-base-4))
+  (mode-line-inactive (:foreground iso-base-2 :background iso-base-5))
+  (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg))
+  (font-lock-comment-delimiter-face (:foreground iso-yellow-text-sec :inherit 'font-lock-comment-face))
+  ;; (font-lock-comment-face (:foreground iso-base-3 :slant 'italic))
+  (font-lock-type-face (:foreground iso-purple-text :background iso-purple-bg))
+  (font-lock-keyword-face (:weight 'bold))
+  (font-lock-string-face (:foreground iso-green-text :background iso-green-bg))
+  (font-lock-builtin-face (:foreground iso-blue-text :background iso-blue-bg))
+  (font-lock-constant-face (:foreground iso-teal-text :background iso-teal-bg))
+  (font-lock-function-name-face (:foreground iso-purple-text :background iso-purple-bg))
 
-(custom-theme-set-variables 'isohedron
-                             `(pos-tip-foreground-color ,iso-base-1)
-                             `(pos-tip-background-color ,iso-base-7)
-                             `(ansi-color-names-vector [,iso-base-7
-                                                        ,iso-ui-red
-                                                        ,iso-green-strong
-                                                        ,iso-yellow-strong
-                                                        ,iso-blue-strong
-                                                        ,iso-purple-strong
-                                                        ,iso-teal-strong
-                                                        ,iso-base-1])))
+  (css-selector (:foreground iso-base-1 :background iso-base-7))
+  (link (:foreground iso-ui-blue :underline t))
+  (link-visited (:foreground iso-purple-strong :underline t))
+  (highlight (:background iso-base-6))
+
+  (window-divider (:foreground iso-base-5))
+  (window-divider-last-pixel (:foreground iso-base-5))
+  (window-divider-first-pixel (:foreground iso-base-5))
+  (vertical-border (:foreground iso-base-5))
+  (fringe (:foreground iso-base-2 :background iso-base-7))
+  (diff-hl-change (:foreground iso-base-7 :background iso-ui-blue))
+  (diff-hl-insert (:foreground iso-base-7 :background iso-ui-green))
+  (diff-hl-delete (:foreground iso-base-7 :background iso-ui-red))
+  (cursor (:background iso-ui-violet))
+  (shadow (:foreground iso-base-3))
+
+  (tab-bar (:foreground iso-ui-red :background iso-base-5 :height 1.0))
+  (tab-bar-tab (:foreground iso-base-2 :background iso-base-6))
+  (tab-bar-tab-inactive (:foreground iso-base-3 :background iso-base-5))
+  )
+
+;; (custom-theme-set-variables 'isohedron
+;;                              `(pos-tip-foreground-color ,iso-base-1)
+;;                              `(pos-tip-background-color ,iso-base-7)
+;;                              `(ansi-color-names-vector [,iso-base-7
+;;                                                         ,iso-ui-red
+;;                                                         ,iso-green-strong
+;;                                                         ,iso-yellow-strong
+;;                                                         ,iso-blue-strong
+;;                                                         ,iso-purple-strong
+;;                                                         ,iso-teal-strong
+;;                                                         ,iso-base-1]))
+)
 
 ;;;###autoload
 (and load-file-name
