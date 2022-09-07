@@ -86,9 +86,10 @@
  ((default (:foreground iso-base-1 :background iso-base-7 ))
   (mode-line (:foreground iso-base-1 :background iso-base-4))
   (mode-line-inactive (:foreground iso-base-2 :background iso-base-5))
-  (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg))
+
+  ;; font-lock faces that many things derive from by default
+  (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg :slant 'italic))
   (font-lock-comment-delimiter-face (:foreground iso-yellow-text-sec :inherit 'font-lock-comment-face))
-  ;; (font-lock-comment-face (:foreground iso-base-3 :slant 'italic))
   (font-lock-type-face (:foreground iso-purple-text :background iso-purple-bg))
   (font-lock-keyword-face (:weight 'bold))
   (font-lock-string-face (:foreground iso-green-text :background iso-green-bg))
@@ -96,11 +97,15 @@
   (font-lock-constant-face (:foreground iso-teal-text :background iso-teal-bg))
   (font-lock-function-name-face (:foreground iso-purple-text :background iso-purple-bg))
 
-  (css-selector (:foreground iso-base-1 :background iso-base-7))
+  ;; other basic faces
   (link (:foreground iso-ui-blue :underline t))
   (link-visited (:foreground iso-purple-strong :underline t))
   (highlight (:background iso-base-6))
 
+  ;; syntax-specific overrides
+  (css-selector (:foreground iso-base-1 :background iso-base-7))
+
+  ;; ui elements
   (window-divider (:foreground iso-base-5))
   (window-divider-last-pixel (:foreground iso-base-5))
   (window-divider-first-pixel (:foreground iso-base-5))
@@ -112,23 +117,37 @@
   (cursor (:background iso-ui-violet))
   (shadow (:foreground iso-base-3))
 
+  ;; tab-bar mode
   (tab-bar (:foreground iso-ui-red :background iso-base-5 :height 1.0))
   (tab-bar-tab (:foreground iso-base-2 :background iso-base-6))
   (tab-bar-tab-inactive (:foreground iso-base-3 :background iso-base-5))
-  )
 
-;; (custom-theme-set-variables 'isohedron
-;;                              `(pos-tip-foreground-color ,iso-base-1)
-;;                              `(pos-tip-background-color ,iso-base-7)
-;;                              `(ansi-color-names-vector [,iso-base-7
-;;                                                         ,iso-ui-red
-;;                                                         ,iso-green-strong
-;;                                                         ,iso-yellow-strong
-;;                                                         ,iso-blue-strong
-;;                                                         ,iso-purple-strong
-;;                                                         ,iso-teal-strong
-;;                                                         ,iso-base-1]))
-)
+  ;; org-mode
+  (org-block (:inherit 'default :background iso-base-6 :extend t))
+  (org-block-end-line (:inherit 'shadow))
+  (org-block-begin-line (:inherit 'shadow))
+  (org-ellipsis (:inherit 'shadow :background iso-base-7))
+  ;; (org-level-1 (:inherit 'outline-1 :extend nil))
+  (org-headline-todo (:weight 'light :slant 'normal))
+  (org-headline-done (:inherit '(shadow italic default)))
+  (org-todo (:foreground iso-green-text-sec :background iso-green-bg))
+  (org-done (:inherit '(shadow italic) :background iso-base-6))
+
+  (outline-1 (:foreground iso-purple-text-sec :inherit 'bold))
+  (outline-2 (:foreground iso-teal-text-sec :inherit 'bold))
+  (outline-3 (:foreground iso-yellow-text-sec :inherit 'bold))
+  (outline-4 (:foreground iso-blue-text-sec :inherit 'bold))
+  (outline-5 (:foreground iso-orange-text-sec :inherit 'bold))
+  (outline-6 (:foreground iso-green-text-sec :inherit 'bold))
+  ;; (outline-1 (:foreground iso-purple-text :background iso-purple-bg))
+  ;; (outline-2 (:foreground iso-teal-text :background iso-teal-bg))
+  ;; (outline-3 (:foreground iso-yellow-text :background iso-yellow-bg))
+  ;; (outline-4 (:foreground iso-blue-text :background iso-blue-bg))
+  ;; (outline-5 (:foreground iso-orange-text :background iso-orange-bg))
+  ;; (outline-6 (:foreground iso-green-text :background iso-green-bg))
+  (outline-7 (:inherit '(bold)))
+  (outline-8 (:inherit 'italic))
+  ))
 
 ;;;###autoload
 (and load-file-name
