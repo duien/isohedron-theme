@@ -85,7 +85,7 @@
 
  ((default (:foreground iso-base-1 :background iso-base-7 ))
   (mode-line (:foreground iso-base-1 :background iso-base-4))
-  (mode-line-inactive (:foreground iso-base-2 :background iso-base-5))
+  (mode-line-inactive (:foreground iso-base-3 :background iso-base-6))
 
   ;; font-lock faces that many things derive from by default
   (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg :slant 'italic))
@@ -116,11 +116,12 @@
   (diff-hl-delete (:foreground iso-base-7 :background iso-ui-red))
   (cursor (:background iso-ui-violet))
   (shadow (:foreground iso-base-3))
+  (fill-column-indicator (:foreground iso-base-6))
 
   ;; tab-bar mode
-  (tab-bar (:foreground iso-ui-red :background iso-base-5 :height 1.0))
-  (tab-bar-tab (:foreground iso-base-2 :background iso-base-6))
-  (tab-bar-tab-inactive (:foreground iso-base-3 :background iso-base-5))
+  (tab-bar (:foreground iso-ui-red :background iso-base-6 :height 1.0))
+  (tab-bar-tab (:foreground iso-base-2 :background iso-base-7 :weight 'bold))
+  (tab-bar-tab-inactive (:foreground iso-base-3 :background iso-base-6))
 
   ;; org-mode
   (org-block (:inherit 'default :background iso-base-6 :extend t))
@@ -130,8 +131,10 @@
   ;; (org-level-1 (:inherit 'outline-1 :extend nil))
   (org-headline-todo (:weight 'light :slant 'normal))
   (org-headline-done (:inherit '(shadow italic default)))
-  (org-todo (:foreground iso-green-text-sec :background iso-green-bg))
-  (org-done (:inherit '(shadow italic) :background iso-base-6))
+  (org-todo (:foreground iso-green-text-sec :background iso-green-bg :inherit 'bold))
+  (org-done (:inherit '(shadow italic) :background iso-base-6 :weight 'light))
+  (org-table (:inherit 'default))
+  (org-drawer (:inherit 'shadow))
 
   (outline-1 (:foreground iso-purple-text-sec :inherit 'bold))
   (outline-2 (:foreground iso-teal-text-sec :inherit 'bold))
