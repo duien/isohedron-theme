@@ -93,14 +93,17 @@
   (font-lock-type-face (:foreground iso-purple-text :background iso-purple-bg))
   (font-lock-keyword-face (:weight 'bold))
   (font-lock-string-face (:foreground iso-green-text :background iso-green-bg))
-  (font-lock-builtin-face (:foreground iso-blue-text :background iso-blue-bg))
-  (font-lock-constant-face (:foreground iso-teal-text :background iso-teal-bg))
+  (font-lock-builtin-face (:slant 'italic))
+  (font-lock-constant-face (:foreground iso-blue-text :background iso-blue-bg))
   (font-lock-function-name-face (:foreground iso-purple-text :background iso-purple-bg))
+  (font-lock-variable-name-face (:foreground iso-teal-text :background iso-teal-bg))
 
   ;; other basic faces
   (link (:foreground iso-ui-blue :underline t))
   (link-visited (:foreground iso-purple-strong :underline t))
   (highlight (:background iso-base-6))
+  (line-number (:foreground iso-base-4))
+  (line-number-current-line (:foreground iso-base-3))
 
   ;; syntax-specific overrides
   (css-selector (:foreground iso-base-1 :background iso-base-7))
@@ -128,20 +131,20 @@
   (org-block-end-line (:inherit 'shadow))
   (org-block-begin-line (:inherit 'shadow))
   (org-ellipsis (:inherit 'shadow :background iso-base-7))
-  ;; (org-level-1 (:inherit 'outline-1 :extend nil))
-  (org-headline-todo (:weight 'light :slant 'normal))
+  (org-headline-todo (:slant 'normal)) ;; TODO deal with weight
   (org-headline-done (:inherit '(shadow italic default)))
   (org-todo (:foreground iso-green-text-sec :background iso-green-bg :inherit 'bold))
-  (org-done (:inherit '(shadow italic) :background iso-base-6 :weight 'light))
+  (org-done (:inherit '(shadow italic) :background iso-base-6)) ;; TODO deal with weight
   (org-table (:inherit 'default))
   (org-drawer (:inherit 'shadow))
+  (org-meta-line (:inherit 'shadow))
 
-  (outline-1 (:foreground iso-purple-text-sec :inherit 'bold))
-  (outline-2 (:foreground iso-teal-text-sec :inherit 'bold))
-  (outline-3 (:foreground iso-yellow-text-sec :inherit 'bold))
-  (outline-4 (:foreground iso-blue-text-sec :inherit 'bold))
-  (outline-5 (:foreground iso-orange-text-sec :inherit 'bold))
-  (outline-6 (:foreground iso-green-text-sec :inherit 'bold))
+  (outline-1 (:foreground iso-purple-text :background iso-purple-bg :inherit 'bold))
+  (outline-2 (:inherit '(default bold)))
+  (outline-3 (:inherit '(default bold)))
+  (outline-4 (:inherit '(default bold)))
+  (outline-5 (:inherit '(default bold)))
+  (outline-6 (:inherit '(default bold)))
   ;; (outline-1 (:foreground iso-purple-text :background iso-purple-bg))
   ;; (outline-2 (:foreground iso-teal-text :background iso-teal-bg))
   ;; (outline-3 (:foreground iso-yellow-text :background iso-yellow-bg))
@@ -160,3 +163,5 @@
                    (file-name-directory load-file-name))))
 
 (provide-theme 'isohedron)
+
+;; (load-theme 'isohedron)
