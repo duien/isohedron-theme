@@ -32,6 +32,9 @@
 ;;; Code:
 (require 'autothemer)
 
+(defvar isohedron-default-weight)
+(setq isohedron-default-weight 'light)
+
 (autothemer-deftheme
  isohedron "Highlighters"
 
@@ -72,10 +75,19 @@
   (iso-blue-strong "#75A3FF")
   (iso-blue-bg "#DDE3F2")
 
+  (iso-violet-text "#554e6a")
+  ;; (iso-violet-text-sec)
+  (iso-violet-strong "#714eda")
+  (iso-violet-bg "#e6e0f5")
+
   (iso-purple-text "#614C61")
   (iso-purple-text-sec "#9C739C")
   (iso-purple-strong "#CE5CFF")
   (iso-purple-bg "#F1DDF1")
+
+  ;; link colors
+  (iso-blue-vivid "#0f6cb8")
+  (iso-purple-vivid "#af2ca9")
 
   (iso-ui-orange "#DF870C")
   (iso-ui-green "#8AA60B")
@@ -90,7 +102,9 @@
   ;; font-lock faces that many things derive from by default
   (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg :slant 'italic))
   (font-lock-comment-delimiter-face (:foreground iso-yellow-text-sec :inherit 'font-lock-comment-face))
-  (font-lock-type-face (:foreground iso-purple-text :background iso-purple-bg))
+  ;; (font-lock-type-face (:foreground iso-purple-text :background iso-purple-bg))
+  ;; (font-lock-type-face (:foreground iso-violet-text :background iso-violet-bg))
+  (font-lock-type-face (:inherit 'default))
   (font-lock-keyword-face (:weight 'bold))
   (font-lock-string-face (:foreground iso-green-text :background iso-green-bg))
   (font-lock-builtin-face (:slant 'italic))
@@ -99,14 +113,15 @@
   (font-lock-variable-name-face (:foreground iso-teal-text :background iso-teal-bg))
 
   ;; other basic faces
-  (link (:foreground iso-ui-blue :underline t))
-  (link-visited (:foreground iso-purple-strong :underline t))
-  (highlight (:background iso-base-6))
+  (link (:foreground iso-blue-vivid :underline t))
+  (link-visited (:foreground iso-purple-vivid :underline t))
+  (highlight (:foreground iso-orange-text :background iso-orange-bg))
   (line-number (:foreground iso-base-4))
   (line-number-current-line (:foreground iso-base-3))
 
   ;; syntax-specific overrides
   (css-selector (:foreground iso-base-1 :background iso-base-7))
+  (mmm-default-submode-face (:background 'unspecified))
 
   ;; ui elements
   (window-divider (:foreground iso-base-5))
@@ -119,7 +134,9 @@
   (diff-hl-delete (:foreground iso-base-7 :background iso-ui-red))
   (cursor (:background iso-ui-violet))
   (shadow (:foreground iso-base-3))
-  (fill-column-indicator (:foreground iso-base-6))
+  (fill-column-indicator (:foreground iso-base-5))
+
+  (dired-header (:inherit 'bold))
 
   ;; tab-bar mode
   (tab-bar (:foreground iso-ui-red :background iso-base-6 :height 1.0))
@@ -130,27 +147,31 @@
   (org-block (:inherit 'default :background iso-base-6 :extend t))
   (org-block-end-line (:inherit 'shadow))
   (org-block-begin-line (:inherit 'shadow))
-  (org-ellipsis (:inherit 'shadow :background iso-base-7))
-  (org-headline-todo (:slant 'normal)) ;; TODO deal with weight
-  (org-headline-done (:inherit '(shadow italic default)))
+  (org-ellipsis (:inherit 'shadow :background iso-base-7 :weight isohedron-default-weight))
+  (org-headline-todo (:weight isohedron-default-weight :slant 'normal)) ;; TODO deal with weight
+  (org-headline-done (:weight isohedron-default-weight :inherit '(shadow italic default)))
   (org-todo (:foreground iso-green-text-sec :background iso-green-bg :inherit 'bold))
-  (org-done (:inherit '(shadow italic) :background iso-base-6)) ;; TODO deal with weight
-  (org-table (:inherit 'default))
+  (org-done (:weight isohedron-default-weight :inherit '(shadow italic) :background iso-base-6)) ;; TODO deal with weight
+  (org-table (:foreground iso-base-2))
+  ;; (org-formula (:background 'unspecified)) ;; TODO table background doesn't show through
   (org-drawer (:inherit 'shadow))
   (org-meta-line (:inherit 'shadow))
+  (org-date (:foreground iso-violet-text :background iso-violet-bg))
+  (org-document-title (:height 1.5 :foreground iso-ui-violet :inherit 'bold))
+  (org-special-keyword (:inherit 'shadow)) ;; The special `comment' todo keyword
+  ;; TODO differentiate verbatim and code
+  (org-verbatim (:inherit 'font-lock-constant-face))
+  ;; (org-code (:foreground iso-orange-text :background iso-orange-bg))
+  (org-code (:inherit 'font-lock-variable-name-face))
+  (org-tag (:weight isohedron-default-weight :inherit 'shadow))
+  (org-archived (:inherit '(shadow italic)))
 
-  (outline-1 (:foreground iso-purple-text :background iso-purple-bg :inherit 'bold))
-  (outline-2 (:inherit '(default bold)))
-  (outline-3 (:inherit '(default bold)))
-  (outline-4 (:inherit '(default bold)))
-  (outline-5 (:inherit '(default bold)))
-  (outline-6 (:inherit '(default bold)))
-  ;; (outline-1 (:foreground iso-purple-text :background iso-purple-bg))
-  ;; (outline-2 (:foreground iso-teal-text :background iso-teal-bg))
-  ;; (outline-3 (:foreground iso-yellow-text :background iso-yellow-bg))
-  ;; (outline-4 (:foreground iso-blue-text :background iso-blue-bg))
-  ;; (outline-5 (:foreground iso-orange-text :background iso-orange-bg))
-  ;; (outline-6 (:foreground iso-green-text :background iso-green-bg))
+  (outline-1 (:height 1.125 :foreground iso-purple-text :background iso-purple-bg :inherit 'bold))
+  (outline-2 (:inherit '(bold default)))
+  (outline-3 (:inherit '(bold default)))
+  (outline-4 (:inherit '(bold default)))
+  (outline-5 (:inherit '(bold default)))
+  (outline-6 (:inherit '(bold default)))
   (outline-7 (:inherit '(bold)))
   (outline-8 (:inherit 'italic))
   ))
@@ -164,4 +185,8 @@
 
 (provide-theme 'isohedron)
 
+;;; Shortcuts and Conveniences for Testing
 ;; (load-theme 'isohedron)
+;; (setq rainbow-ansi-colors nil rainbow-x-colors nil)
+;; (autothemer-colorize)
+;; (rainbow-mode)
