@@ -133,7 +133,7 @@
   (diff-hl-delete (:foreground iso-base-7 :background iso-ui-red))
   (cursor (:background iso-ui-violet))
   (shadow (:foreground iso-base-3))
-  (fill-column-indicator (:foreground iso-base-5))
+  (fill-column-indicator (:foreground iso-base-6))
 
   (dired-header (:inherit 'bold))
 
@@ -165,6 +165,19 @@
   (org-tag (:weight isohedron-default-weight :inherit 'shadow))
   (org-archived (:inherit '(shadow italic)))
   (org-superstar-leading (:foreground iso-base-5))
+
+  ;; agenda views
+  (org-agenda-structure (:inherit 'default :height 1.5 :inherit 'bold))
+  (org-agenda-structure-secondary (:inherit '(shadow default)))
+  (org-agenda-structure-filter (:inherit 'org-agenda-structure :foreground iso-yellow-text :background iso-yellow-bg))
+  (org-time-grid (:foreground iso-base-5))
+  (org-agenda-current-time (:foreground iso-ui-violet))
+  (org-agenda-done (:inherit '(shadow italic)))
+  (org-agenda-date (:foreground iso-yellow-text :background iso-yellow-bg))
+  (org-agenda-date-weekend (:inherit '(org-agenda-date italic)))
+  ;; (org-agenda-date-today (:foreground iso-teal-text :background iso-teal-bg :inherit '(org-agenda-date bold)))
+  ;; (org-agenda-date-today (:inherit '(org-document-title org-agenda-date)))
+  (org-agenda-date-today (:foreground iso-violet-text :background iso-violet-bg :inherit 'bold))
 
   (outline-1 (:height 1.125 :foreground iso-purple-text :background iso-purple-bg :inherit 'bold))
   (outline-2 (:inherit '(bold default)))
