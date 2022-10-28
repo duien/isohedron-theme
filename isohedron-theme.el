@@ -32,8 +32,7 @@
 ;;; Code:
 (require 'autothemer)
 
-(defvar isohedron-default-weight)
-(setq isohedron-default-weight 'light)
+(defvar isohedron-default-weight 'normal)
 
 (autothemer-deftheme
  isohedron "Highlighters"
