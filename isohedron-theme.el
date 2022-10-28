@@ -165,6 +165,7 @@
   (org-code (:inherit 'font-lock-variable-name-face))
   (org-tag (:weight isohedron-default-weight :inherit 'shadow))
   (org-archived (:inherit '(shadow italic)))
+  (org-superstar-leading (:foreground iso-base-5))
 
   (outline-1 (:height 1.125 :foreground iso-purple-text :background iso-purple-bg :inherit 'bold))
   (outline-2 (:inherit '(bold default)))
