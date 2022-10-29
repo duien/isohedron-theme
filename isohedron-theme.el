@@ -103,7 +103,7 @@
   (font-lock-comment-delimiter-face (:foreground iso-yellow-text-sec :inherit 'font-lock-comment-face))
   ;; (font-lock-type-face (:foreground iso-purple-text :background iso-purple-bg))
   ;; (font-lock-type-face (:foreground iso-violet-text :background iso-violet-bg))
-  (font-lock-type-face (:inherit 'default))
+  (font-lock-type-face ())
   (font-lock-keyword-face (:weight 'bold))
   (font-lock-string-face (:foreground iso-green-text :background iso-green-bg))
   (font-lock-builtin-face (:slant 'italic))
