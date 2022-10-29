@@ -95,8 +95,9 @@
   (iso-ui-red "#FB6C6A"))
 
  ((default (:foreground iso-base-1 :background iso-base-7 ))
-  (mode-line (:foreground iso-base-1 :background iso-base-4))
-  (mode-line-inactive (:foreground iso-base-3 :background iso-base-6))
+
+  (mode-line (:foreground iso-base-7 :background iso-purple-text-sec))
+  (mode-line-inactive (:foreground iso-base-3 :background iso-base-5))
 
   ;; font-lock faces that many things derive from by default
   (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg :slant 'italic))
