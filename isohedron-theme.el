@@ -75,7 +75,7 @@
   (iso-blue-bg "#DDE3F2")
 
   (iso-violet-text "#554e6a")
-  ;; (iso-violet-text-sec)
+  (iso-violet-text-sec "#726697")
   (iso-violet-strong "#714eda")
   (iso-violet-bg "#e6e0f5")
 
@@ -96,8 +96,9 @@
 
  ((default (:foreground iso-base-1 :background iso-base-7 ))
 
-  (mode-line (:foreground iso-base-7 :background iso-purple-text-sec))
+  (mode-line (:foreground iso-base-7 :background iso-violet-text-sec))
   (mode-line-inactive (:foreground iso-base-3 :background iso-base-5))
+  (mode-line-highlight (:background iso-ui-blue :foreground iso-base-7))
 
   ;; font-lock faces that many things derive from by default
   (font-lock-comment-face (:foreground iso-yellow-text :background iso-yellow-bg :slant 'italic))
