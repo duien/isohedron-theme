@@ -144,6 +144,20 @@
   (tab-bar-tab (:foreground iso-base-2 :background iso-base-7 :weight 'bold))
   (tab-bar-tab-inactive (:foreground iso-base-3 :background iso-base-6))
 
+  ;; completion (corfu, vertico, orderless, etc)
+  (corfu-default (:background iso-base-6 :foreground iso-base-2))
+  (corfu-border (:background iso-base-6))
+  (corfu-bar (:background iso-base-4))
+  ;; (corfu-current (:inverse-video t))
+  (corfu-current (:inherit 'vertico-current))
+  (completions-common-part (:foreground iso-ui-violet))
+
+  (orderless-match-face-0 (:foreground iso-violet-text-sec :background iso-violet-bg :inherit 'bold))
+  (orderless-match-face-1 (:foreground iso-teal-text-sec :background iso-teal-bg :inherit 'bold))
+  (orderless-match-face-2 (:foreground iso-purple-text-sec :background iso-purple-bg :inherit 'bold))
+  (orderless-match-face-3 (:foreground iso-blue-text-sec :background iso-blue-bg :inherit 'bold))
+  (vertico-current (:background iso-base-4 :foreground iso-base-1))
+
   ;; org-mode
   (org-block (:inherit 'default :background iso-base-6 :extend t))
   (org-block-end-line (:inherit 'shadow))
