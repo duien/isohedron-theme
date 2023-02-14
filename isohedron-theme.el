@@ -32,7 +32,7 @@
 ;;; Code:
 (require 'autothemer)
 
-(defvar isohedron-default-weight 'normal)
+;; (defvar isohedron-default-weight 'normal)
 
 (autothemer-deftheme
  isohedron "Highlighters"
@@ -48,6 +48,7 @@
   (iso-base-5 "#E4DDD2")
   (iso-base-6 "#F1ECE4")
   (iso-base-7 "#F7F3EE")
+  ;; cosmic latte #fff8e7
 
   (iso-yellow-text "#706648")
   (iso-yellow-text-sec "#AD9B67")
@@ -107,7 +108,7 @@
   ;; (font-lock-type-face (:foreground iso-violet-text :background iso-violet-bg))
   (font-lock-type-face ())
   (font-lock-keyword-face (:weight 'bold))
-  (font-lock-string-face (:foreground iso-green-text :background iso-green-bg))
+  (font-lock-string-face (:foreground iso-green-text :background iso-green-bg :slant 'italic))
   (font-lock-builtin-face (:slant 'italic))
   (font-lock-constant-face (:foreground iso-blue-text :background iso-blue-bg))
   (font-lock-function-name-face (:foreground iso-purple-text :background iso-purple-bg))
@@ -162,11 +163,11 @@
   (org-block (:inherit 'default :background iso-base-6 :extend t))
   (org-block-end-line (:inherit 'shadow))
   (org-block-begin-line (:inherit 'shadow))
-  (org-ellipsis (:inherit 'shadow :background iso-base-7 :weight isohedron-default-weight))
-  (org-headline-todo (:weight isohedron-default-weight :slant 'normal)) ;; TODO deal with weight
-  (org-headline-done (:weight isohedron-default-weight :inherit '(shadow italic default)))
+  (org-ellipsis (:inherit 'shadow :background iso-base-7 :weight 'reset))
+  (org-headline-todo (:weight 'reset :slant 'normal)) ;; TODO deal with weight
+  (org-headline-done (:weight 'reset :inherit '(shadow italic default)))
   (org-todo (:foreground iso-green-text-sec :background iso-green-bg :inherit 'bold))
-  (org-done (:weight isohedron-default-weight :inherit '(shadow italic) :background iso-base-6)) ;; TODO deal with weight
+  (org-done (:weight 'reset :inherit '(shadow italic) :background iso-base-6)) ;; TODO deal with weight
   (org-table (:foreground iso-base-2))
   ;; (org-formula (:background 'unspecified)) ;; TODO table background doesn't show through
   (org-drawer (:inherit 'shadow))
@@ -178,7 +179,7 @@
   (org-verbatim (:inherit 'font-lock-constant-face))
   ;; (org-code (:foreground iso-orange-text :background iso-orange-bg))
   (org-code (:inherit 'font-lock-variable-name-face))
-  (org-tag (:weight isohedron-default-weight :inherit 'shadow))
+  (org-tag (:weight 'reset :inherit 'shadow))
   (org-archived (:inherit '(shadow italic)))
   (org-superstar-leading (:foreground iso-base-5))
 
