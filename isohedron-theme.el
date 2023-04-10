@@ -159,7 +159,12 @@
   (orderless-match-face-3 (:foreground iso-blue-text-sec :background iso-blue-bg :inherit 'bold))
   (vertico-current (:background iso-base-4 :foreground iso-base-1))
 
+  (nano-modeline-active-status-** (:background iso-yellow-strong :inherit 'nano-modeline-active))
+  (nano-modeline-active-status-RO (:background iso-ui-red :inherit 'nano-modeline-active))
+  (nano-modeline-active-status-RW (:background iso-teal-text-sec :inherit 'nano-modeline-active))
+
   ;; org-mode
+  (org-hide (:foreground iso-base-7))
   (org-block (:inherit 'default :background iso-base-6 :extend t))
   (org-block-end-line (:inherit 'shadow))
   (org-block-begin-line (:inherit 'shadow))
@@ -182,6 +187,7 @@
   (org-tag (:weight 'reset :inherit 'shadow))
   (org-archived (:inherit '(shadow italic)))
   (org-superstar-leading (:foreground iso-base-5))
+  (org-superstar-header-bullet (:weight 'reset))
 
   ;; agenda views
   (org-agenda-structure (:inherit 'default :height 1.5 :inherit 'bold))
