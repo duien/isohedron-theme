@@ -161,7 +161,7 @@
 
   (nano-modeline-active-status-** (:background iso-yellow-strong :inherit 'nano-modeline-active))
   (nano-modeline-active-status-RO (:background iso-ui-red :inherit 'nano-modeline-active))
-  (nano-modeline-active-status-RW (:background iso-teal-text-sec :inherit 'nano-modeline-active))
+  (nano-modeline-active-status-RW (:background iso-violet-text :inherit 'nano-modeline-active))
 
   ;; org-mode
   (org-hide (:foreground iso-base-7))
