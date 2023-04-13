@@ -168,7 +168,7 @@
   (org-block (:inherit 'default :background iso-base-6 :extend t))
   (org-block-end-line (:inherit 'shadow))
   (org-block-begin-line (:inherit 'shadow))
-  (org-ellipsis (:inherit 'shadow :background iso-base-7 :weight 'reset))
+  (org-ellipsis (:inherit '(shadow default) :background iso-base-7))
   (org-headline-todo (:weight 'reset :slant 'normal)) ;; TODO deal with weight
   (org-headline-done (:weight 'reset :inherit '(shadow italic default)))
   (org-todo (:foreground iso-green-text-sec :background iso-green-bg :inherit 'bold))
