@@ -120,6 +120,11 @@
   (highlight (:foreground iso-orange-text :background iso-orange-bg))
   (line-number (:foreground iso-base-4))
   (line-number-current-line (:foreground iso-base-3))
+  (secondary-selection (:foreground iso-teal-text :background iso-teal-bg)) ;; org src block being edited
+  ;; (header-line (:foreground iso-yellow-text :background iso-yellow-bg))
+  (header-line (:foreground iso-teal-text :background iso-teal-bg))
+  ;; (help-key-binding (:box (:line-width '(-1 . -1) :color iso-teal-text-sec) :foreground iso-teal-text :background iso-teal-bg))
+  (help-key-binding (:box (:line-width '(-1 . -1) :color "#9CBAAF") :foreground iso-teal-text :background "#CBDFD6"))
 
   ;; syntax-specific overrides
   (css-selector (:foreground iso-base-1 :background iso-base-7))
