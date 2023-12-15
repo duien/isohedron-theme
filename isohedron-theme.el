@@ -183,14 +183,14 @@
   (org-drawer (:inherit 'shadow))
   (org-meta-line (:inherit 'shadow))
   (org-date (:foreground iso-violet-text :background iso-violet-bg))
-  (org-document-title (:height 1.5 :foreground iso-ui-violet :inherit 'bold))
+  (org-document-title (:height 1.5 :foreground iso-purple-text-sec :inherit 'bold))
   (org-special-keyword (:inherit 'shadow)) ;; The special `comment' todo keyword
   ;; TODO differentiate verbatim and code
   (org-verbatim (:inherit 'font-lock-constant-face))
   ;; (org-code (:foreground iso-orange-text :background iso-orange-bg))
   (org-code (:inherit 'font-lock-variable-name-face))
   (org-tag (:weight 'reset :inherit 'shadow))
-  (org-archived (:inherit '(shadow italic)))
+  (org-archived (:foreground "#c7a8c7" :inherit '(shadow italic))) ;; avg purple bg & text-sec
   (org-superstar-leading (:foreground iso-base-5))
   (org-superstar-header-bullet (:weight 'reset))
 
