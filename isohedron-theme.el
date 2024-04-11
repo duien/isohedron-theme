@@ -194,6 +194,12 @@
   (org-superstar-leading (:foreground iso-base-5))
   (org-superstar-header-bullet (:weight 'reset))
 
+  ;; markdown
+  (markdown-code-face)
+  (markdown-inline-code-face (:inherit '(fixed-pitch font-lock-variable-name-face)))
+  (markdown-pre-face (:background iso-base-6 :extend t))
+  (markdown-language-keyword-face (:inherit 'shadow))
+
   ;; agenda views
   (org-agenda-structure (:inherit 'default :height 1.5 :inherit 'bold))
   (org-agenda-structure-secondary (:inherit '(shadow default)))
