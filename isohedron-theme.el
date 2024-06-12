@@ -96,8 +96,10 @@
   (iso-ui-red "#FB6C6A"))
 
  ((default (:foreground iso-base-1 :background iso-base-7 ))
+  (fixed-pitch ()) ; maybe get rid of bad family override?
 
   (mode-line (:foreground iso-base-7 :background iso-violet-text-sec))
+  (mode-line-active (:inherit 'mode-line)) ; necessary for spacious-padding for some reason
   (mode-line-inactive (:foreground iso-base-3 :background iso-base-5))
   (mode-line-highlight (:background iso-ui-blue :foreground iso-base-7))
 
