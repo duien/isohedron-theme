@@ -5,7 +5,7 @@
 ;; Authors: E Hyland <hello@duien.com>
 ;; URL: http://github.com/duien/isohedron-theme
 ;; Version: 1.0
-;; ;; Package-Requires: ((autothemer "0.2") (emacs "24"))
+;; Package-Requires: ((autothemer "0.2") (emacs "24"))
 
 ;;; License
 ;;
